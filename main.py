@@ -1,0 +1,12 @@
+import os
+import uvicorn
+from fastapi import FastAPI
+
+app = FastAPI()
+
+@app.get("/")
+def read_root():
+    return {"Hello": "Shopify developer"}
+
+if __name__ == "__main__":
+    port = uvicorn.run(app, host="0.0.0.0", port=int(os.getenv("PORT", "8000")))

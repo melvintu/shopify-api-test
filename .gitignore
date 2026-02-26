@@ -1,2 +1,4 @@
 shopify-api-test/
 .env
+shopify.app.toml
+shopify.web.toml
