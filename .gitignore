@@ -2,3 +2,4 @@ shopify-api-test/
 .env
 shopify.app.toml
 shopify.web.toml
+__pycache__/
