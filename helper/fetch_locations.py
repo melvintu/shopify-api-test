@@ -13,7 +13,11 @@ def get_shopify_locations(shop: str):
             locations = shopify.Location.find()
             formatted_locations = {}
             for location in locations:
-                formatted_locations[location.name] = location.id
+                formatted_locations[location.id] = location.name
             return formatted_locations
         except Exception as e:
             return {"error": str(e)}
+        
+def locations_into_string(locations: dict):
+    all_locations_string = ", ".join(str(key) for key in locations)
+    return all_locations_string
